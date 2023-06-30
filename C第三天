@@ -1,0 +1,464 @@
+//输入
+#define _CRT_SECURE_NO_WARNINGS 1
+//输出
+#include <stdio.h>
+//字符串长度      char arr[] = "abc";    printf("%d\n", strlen(arr)); //strlen - String length- 计算字符串长度
+#include <string.h>
+
+
+int main() {
+
+	int arr[10] = { 0 };
+	printf("%d\n", sizeof(arr));
+
+	//计算数组元素个数
+	//个数=数组总大小/每个元素的大小
+	int a = sizeof(arr) / sizeof(arr[0]);
+	printf("sz = %d", a);
+	//int a = 10;
+	////sizeof 计算的是变量/类型所占空间的大小,单位是字节
+	//printf("%d\n", sizeof(a));
+	//printf("%d\n", sizeof(int));
+	//printf("%d\n", sizeof a);
+	return 0;
+}
+
+
+
+/*
+int main() {
+	//单目操作符
+	//双目操作符
+	//三目操作符
+	int a = 10;
+	printf("%d\n", a);
+	printf("%d\n", !a);
+
+	int b = -10;
+	int c = -b;
+	printf("%d\n", b);
+	printf("%d\n", c);
+}
+*/
+
+/*
+int main() {
+	//（2进制）位操作
+	//& 按位与
+	//| 按位或
+	//^ 按位异或
+	int a = 3; //011
+	int b = 5; //101
+	
+	//011
+	//101
+	 int c = a & b;
+// &: 001  同1为1
+	 int d = a | b;
+// |: 111	有1则1
+	int e = a ^ b;
+// ^: 110   不同为1相同为0
+	printf("%d\n", c);
+	printf("%d\n", d);
+	printf("%d\n", e);
+
+	return 0;
+}
+*/
+
+
+
+/*
+* 移位运算符
+int main()
+{
+	//移（2进制）位运算符
+	//<<左移
+	//>>右移
+	int a = 1;
+	//整型1占4个字节 -32bit位
+	//000000000000000000000000000001
+
+	int b=a << 1;
+	//000000000000000000000000000010
+
+	printf("%d\n", b);
+	return 0;
+}
+*/
+
+
+/*int main() {
+	int a = 5 % 2;  //取余
+	printf("%d\n", a);
+	return 0;
+}
+*/
+
+/*
+int main() {
+	//数组
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	printf("%d\n", arr[5]);
+
+	int i = 0;
+	while (i<10) {
+			printf("%d\n", arr[i]);
+		i++;
+	}
+	return 0;
+}
+*/
+
+/*
+* 方法
+int Add(int a , int b) {
+	int sum = a + b;
+	return sum;
+}
+
+int main() {
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	int sum = Add(a, b);
+	printf("%d", sum);
+	return 0;
+}
+*/
+
+/*
+* 
+*		 while		 if	
+int main() {
+	int line = 0;
+	printf("加入比特\n");
+
+	while (line<=20000)
+	{
+		printf("敲一行代码\n : %d",line);
+		line++;
+	}
+	if (line>=20000)
+	{
+		printf("好offer\n");
+	}
+	
+	
+	
+	return 0;
+}
+*/
+
+
+
+
+/*
+int main() {
+	int input = 0;
+	printf("加入比特\n");
+	printf("你要好好学习吗？ （1/0）>: ");
+	scanf("%d", &input);
+	if (input==1)
+	{
+		printf("好office，走上人生巅峰");
+	}
+	else {
+		printf("回家卖红薯!!!");
+	}
+	return 0;
+}*/
+
+
+/*
+	//字符串类型
+
+int main() {
+	char arr[] = "abc";
+	char arr2[] = { 'a','b','c','\0' };
+
+	printf("%d\n", strlen(arr)); //strlen - String length- 计算字符串长度
+	printf("%d\n", strlen(arr2));
+	//转义字符
+	printf("%d\n", strlen( "c:\test\32\test.c"));
+	printf("%s\n", "c:\test\32\test.c");
+	printf("%c\n", '\32'); //8进制
+	printf("%c\n", '\x61');  //16进制
+	return 0;
+}													
+*/
+
+
+//int main() {
+//	//数据在计算机上存储的时候是2进制
+//	//a -  97
+//	//A - 65
+//	//...
+//	//ASCII 编码
+//	//ASCII 码值
+//	char arr1[] = "abc";  //字符数组
+//	//"abc" -- 'a','b','c','\0'-- \0字符串的结束标志
+//	char arr2[] = { 'a','b','c','\0'};
+//	//'\0' = 0
+//	//'a'=97
+//	//'b'=98
+//	//'c'=99
+//
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr2);
+//	return 0;
+//}
+//输入
+#define _CRT_SECURE_NO_WARNINGS 1
+//输出
+#include <stdio.h>
+//字符串长度      char arr[] = "abc";    printf("%d\n", strlen(arr)); //strlen - String length- 计算字符串长度
+#include <string.h>
+
+/*
+int main() {
+	char ch = 'w';
+	char* pc = &ch;
+	*pc = 'a';
+	printf("%c\n", ch);
+	printf("%p\n", pc);
+	printf("%d\n", sizeof(pc));
+	return 0;
+}
+*/
+
+/*
+int main() {
+	int a = 10;
+	//指针变量存储地址:int*
+	//&a 取地址
+	int* p = &a;
+	//printf("%p\n", p);
+	//printf("%p\n",&a);
+	*p = 20;//解引用操作符  把20的值赋给p地址的值
+	printf("%d",a);
+	return 0;
+}
+*/
+
+
+/*
+//#define 定义标识符常亮
+//#define MAX 100
+//#define 可以定义宏-带参数
+
+//函数的定义
+int Max(int a, int b) {
+	if (a>b)
+	{
+		return a;
+	}
+	else {
+		return b;
+	}
+}
+//宏的定义
+#define MAX(A,B)(A>B?A:B)
+int main() {
+	//int a = MAX;  //a==100;sx
+
+	int a = 10;
+	int b = 20;
+	//函数的方式
+	int max = Max(a, b);
+	printf("%d\n", max);
+	//宏的方式
+	max = MAX(a, b);
+	printf("%d", max);
+	return 0;
+}
+*/
+
+/*
+//声明外部函数
+extern int Add(int a,int b);
+//static 修饰函数
+//也是改变了函数的作用域-不准确
+//static 修饰函数改变了函数的链接属性
+//外部链接属性变成了内部链接属性
+int main() {
+	int a = 10;
+	int b = 20;
+	int sum= Add(a, b);
+	printf("sum=%d\n", sum);
+	return 0;
+}
+*/
+
+/*
+//static 修饰全局变量
+//改变了变量的作用域 - 让静态的全局变量只能在自己所在的源文件内部使用
+//出了源文件就不能使用了
+int main() {
+	extern int  g_add;
+	printf("%d\n", g_add);
+	return 0;
+}
+*/
+
+/*
+//static 修饰局部变量
+//局部变量生命周期变长
+//出了作用域不销毁
+void test() {
+static int a = 1; //a是一个静态的局部变量
+	a++;
+	printf("a=%d\n", a);
+}
+int main() {
+
+	int i = 0;
+	while (i < 5) {
+		test();
+		i++;
+	}
+	return 0;
+}
+*/
+
+/*
+int main() {
+////寄存器 register
+// register int a = 20;//建议把a定义为寄存器变量
+// auto	int b = 10;  //局部变量-自动变量
+
+// //int 定义的变量是有符号的 signed
+// //signed int == int ; (定义的时候省略了signed)
+//int  a = 10;
+// a = -2;
+
+
+////无符号数 unsigned
+//unsigned int num =-1; // == int num = 1;
+//printf("%d", num);
+
+
+ ////typedef-类型定义-类型重定义 (改名卡)
+ //typedef unsigned int u_int;
+ //unsigned int num = -20;
+ //u_int num2 = -20;
+ //printf("%d", num);
+
+ //struct - 结构体关键字
+ //union - 联合体、共用体
+
+	return 0;
+}
+*/
+
+
+/*
+int main() {
+	int a = 10;
+	int b = 20;
+		int max=a > b ? a : b;  //  exp1 ? exp2 : exp3;
+								// 1为真 ，执行2 ，为假执行3
+		printf("max=%d", max);
+	return 0;
+}
+*/
+
+
+/*
+int main() {
+		//强制类型转换
+	int a =(int)3.14;  //double -> int 
+	return 0;
+}
+*/
+
+
+/*
+int main() {
+	int a = 10;
+	//int b = a++;  //后置++ 先使用后++
+		//int b = ++a; //前置++ 先++后使用
+		//int b = --a;//前置-- 先--后使用
+		int b = a--;//后置-- 先使用后--
+	printf("a=%d b=%d", a, b); //a=11 b=10
+	return 0;
+}
+*/
+
+
+/*
+int main() {
+	int a = 0; //4个字节 32bit位
+	int b = ~a;
+	//~：按（2进制）位取反
+	//0000000000000000000000000000000
+	//1111111111111111111111111111111
+	//1000000000000000000000000000001
+	printf("%d",b);
+	return 0;
+}
+*/
+
+/*
+int main() {
+	int a = 10;
+	int arr[] = { 1,2,3,4,5,6 };
+	printf("%d\n", sizeof(a)); //4
+	printf("%d\n", sizeof(int)); //4
+	printf("%d\n", sizeof a);//4
+	//printf("%d\n", sizeof int); //err
+	printf("%d\n", sizeof(arr));//计算数组大小，单位是字节
+	printf("%d\n", sizeof(arr)/sizeof(arr[0])); // 数组大小/一个元素大小
+	return 0;
+}
+*/
+
+/*
+int Max(int a,int b) {
+	if (a>b)
+	{
+		return a;
+	}
+	else {
+		return b;
+	}
+}
+
+int main() {
+	int max= Max(10, 20);
+	printf("最大值为：%d\n", max);
+	return 0;
+}
+*/
+#define _CRT_SECURE_NO_WARNINGS 1
+
+	//定义一个全局变量
+//static int g_add = 2023;
+
+//定义一个函数
+static int Add(int a,int b) {
+	int c = a + b;
+	return c;
+}
+
+//输入
+#define _CRT_SECURE_NO_WARNINGS 1
+//输出
+#include <stdio.h>
+
+int sum(int a) {
+	int c = 0;   
+	static int b = 3;
+	c += 1;  //1
+	b += 2;  //5
+	return(a + b + c);   //2+5+1=8
+}
+
+int main() {
+	int a = 2;
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d,", sum(a));
+	}
+	return 0;
+}
